@@ -2,7 +2,7 @@
 //  Notification_Publisher_DemoApp.swift
 //  Notification_Publisher_Demo
 //
-//  Created by Pranav Manikpure on 15/11/25.
+//  Created by Swapnil Magar on 15/11/25.
 //
 
 import SwiftUI
