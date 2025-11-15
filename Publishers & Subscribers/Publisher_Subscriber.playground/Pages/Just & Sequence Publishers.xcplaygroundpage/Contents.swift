@@ -37,3 +37,14 @@ let doublesPublisher = numbersPublisher.map { $0 * 2 }
 doublesPublisher.sink { value in
     print(value)
 }
+
+// Sequence Publisher for Range
+let numbersRangePublisher = (1...10).publisher
+let cancellable3 = numbersRangePublisher.sink { value in
+    print(value)
+}
+
+// We can cancel the subscription after delay
+DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+    cancellable3.cancel()
+}
