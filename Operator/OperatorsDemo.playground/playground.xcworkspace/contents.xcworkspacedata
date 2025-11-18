@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:">
+      location = "self:">
+   </FileRef>
+   <FileRef
+      location = "group:OperatorsDemo.playground">
    </FileRef>
 </Workspace>
