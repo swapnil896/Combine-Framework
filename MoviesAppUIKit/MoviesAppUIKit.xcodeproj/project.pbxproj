@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43DABD4E2ED0393E0050C07C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DABD4D2ED0393E0050C07C /* Movie.swift */; };
 		8D2FCF682AD8804700DB9E71 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2FCF672AD8804700DB9E71 /* String+Extensions.swift */; };
 		8D5F406A2AD83DF90058B14B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F40692AD83DF90058B14B /* AppDelegate.swift */; };
 		8D5F406C2AD83DF90058B14B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F406B2AD83DF90058B14B /* SceneDelegate.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43DABD4D2ED0393E0050C07C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		8D2FCF672AD8804700DB9E71 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8D5F40662AD83DF90058B14B /* MoviesAppUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesAppUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5F40692AD83DF90058B14B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		8D5F40802AD8598F0058B14B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				43DABD4D2ED0393E0050C07C /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				8D2FCF682AD8804700DB9E71 /* String+Extensions.swift in Sources */,
 				8D5F406A2AD83DF90058B14B /* AppDelegate.swift in Sources */,
 				8D5F406C2AD83DF90058B14B /* SceneDelegate.swift in Sources */,
+				43DABD4E2ED0393E0050C07C /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
