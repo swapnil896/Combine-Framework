@@ -14,13 +14,27 @@ class MovieListViewModel {
     @Published var loadingCompleted: Bool = false
     
     private var cancellables: Set<AnyCancellable> = []
+    private var searchSubject = CurrentValueSubject<String, Never>("")
     let httpClient: HttpClient
     
     init(httpClient: HttpClient) {
         self.httpClient = httpClient
+        setupSearchPublisher()
     }
     
-    func fetchMovies(for searchTerm: String) {
+    private func setupSearchPublisher() {
+        searchSubject
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+            .sink { [weak self] searchValue in
+                self?.loadMovies(for: searchValue)
+            }.store(in: &cancellables)
+    }
+    
+    func search(for searchTerm: String) {
+        searchSubject.send(searchTerm)
+    }
+    
+    func loadMovies(for searchTerm: String) {
         httpClient.fetchMovies(searchTerm: searchTerm)
             .sink { [weak self] completion in
                 switch completion {
