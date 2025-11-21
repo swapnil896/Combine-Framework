@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43DABD542ED08C940050C07C /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DABD532ED08C940050C07C /* MovieListViewModel.swift */; };
 		8DE9EE822AD9C7FE007BDF3C /* MoviesSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE9EE812AD9C7FE007BDF3C /* MoviesSwiftUIApp.swift */; };
 		8DE9EE842AD9C7FE007BDF3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE9EE832AD9C7FE007BDF3C /* ContentView.swift */; };
 		8DE9EE862AD9C800007BDF3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DE9EE852AD9C800007BDF3C /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43DABD532ED08C940050C07C /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 		8DE9EE7E2AD9C7FE007BDF3C /* MoviesSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE9EE812AD9C7FE007BDF3C /* MoviesSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSwiftUIApp.swift; sourceTree = "<group>"; };
 		8DE9EE832AD9C7FE007BDF3C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				8DE9EE832AD9C7FE007BDF3C /* ContentView.swift */,
 				8DE9EE852AD9C800007BDF3C /* Assets.xcassets */,
 				8DE9EE872AD9C800007BDF3C /* Preview Content */,
+				43DABD532ED08C940050C07C /* MovieListViewModel.swift */,
 			);
 			path = MoviesSwiftUI;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				8DE9EE822AD9C7FE007BDF3C /* MoviesSwiftUIApp.swift in Sources */,
 				8DE9EE942AD9C8D6007BDF3C /* Movie.swift in Sources */,
 				8DE9EE912AD9C86B007BDF3C /* HTTPClient.swift in Sources */,
+				43DABD542ED08C940050C07C /* MovieListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
