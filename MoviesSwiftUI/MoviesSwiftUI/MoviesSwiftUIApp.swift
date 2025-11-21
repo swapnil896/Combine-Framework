@@ -11,9 +11,7 @@ import SwiftUI
 struct MoviesSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                ContentView()
-            }
+            ContentView(httpClient: HTTPClient())
         }
     }
 }
