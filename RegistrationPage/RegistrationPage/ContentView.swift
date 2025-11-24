@@ -16,9 +16,6 @@ struct ContentView: View {
             VStack {
                 emailField
                 userNameField
-                if !viewModel.isUserNameAvailable {
-                    userNameNotAvailableText
-                }
                 passwordField
                 registerButton
             }
@@ -35,6 +32,10 @@ struct ContentView: View {
                 .font(.title3)
             TextField("Enter user name", text: $viewModel.userName)
                 .textFieldStyle(.roundedBorder)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(usernameBorderColor, lineWidth: 1)
+                }
         }
         .padding()
     }
@@ -46,6 +47,10 @@ struct ContentView: View {
                 .font(.title3)
             TextField("Enter Email ID", text: $viewModel.email)
                 .textFieldStyle(.roundedBorder)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(emailBorderColor, lineWidth: 1)
+                }
         }
         .padding()
     }
@@ -55,8 +60,12 @@ struct ContentView: View {
         VStack(alignment: .leading) {
             Text("Password")
                 .font(.title3)
-            TextField("Enter password", text: $viewModel.password)
+            SecureField("Enter password", text: $viewModel.password)
                 .textFieldStyle(.roundedBorder)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(passwordBorderColor, lineWidth: 1)
+                }
         }
         .padding()
     }
@@ -64,14 +73,15 @@ struct ContentView: View {
     @ViewBuilder
     var registerButton: some View {
         Button {
-            
+            // handle registration
         } label : {
             Text("Register")
                 .font(.headline)
                 .frame(width: 180, height: 30)
         }
-        .disabled(viewModel.allFieldsValid == false)
-        .buttonStyle(.glassProminent)
+        .disabled(!viewModel.allFieldsValid)
+        .buttonStyle(.borderedProminent)
+        .padding()
     }
     
     @ViewBuilder
@@ -79,6 +89,27 @@ struct ContentView: View {
         Text("User name is not available")
             .foregroundColor(.red)
             .multilineTextAlignment(.leading)
+    }
+    
+    var emailBorderColor: Color {
+        if viewModel.email.isEmpty {
+            return .gray
+        }
+        return viewModel.isEmailValid ? .green : .red
+    }
+    
+    var passwordBorderColor: Color {
+        if viewModel.password.isEmpty {
+            return .gray
+        }
+        return viewModel.isPasswordValid ? .green : .red
+    }
+    
+    var usernameBorderColor: Color {
+        if viewModel.userName.isEmpty {
+            return .gray
+        }
+        return viewModel.isUserNameAvailable ? .green : .red
     }
 }
 
